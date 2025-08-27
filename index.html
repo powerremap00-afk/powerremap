@@ -20,47 +20,26 @@
 
   <!-- Facebook Pixel -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
-    (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'XXXXXXXXXXXXXXX'); 
-    fbq('track', 'PageView');
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'XXXXXXXXXXXXXXX'); fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXX&ev=PageView&noscript=1"/></noscript>
 
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f0f0; color: #1a1a1a; }
-
-    /* Tema Azul/Prata */
     header { padding: 40px 20px; text-align: center; background: linear-gradient(135deg, #007bff, #6c757d); color: #fff; }
     header h1 { margin: 0; font-size: 2rem; color: #007bff; text-shadow: 2px 2px 5px #000; }
     nav { background: #1a1a1a; padding: 10px; text-align: center; border-top: 3px solid #007bff; border-bottom: 3px solid #007bff; }
     nav a { color: #fff; margin: 0 10px; text-decoration: none; font-weight: bold; transition: 0.3s; }
     nav a:hover { color: #007bff; }
-    .card { background: #fff; border: 1px solid #007bff; box-shadow: 0 4px 8px rgba(0,123,255,0.3); padding: 15px; border-radius: 10px; }
+    .card { background: #fff; border: 1px solid #007bff; box-shadow: 0 4px 8px rgba(0,123,255,0.3); padding: 15px; border-radius: 10px; margin-bottom: 10px; }
     .card h3 { color: #007bff; }
     section { padding: 20px; text-align: center; }
     .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 10px; }
     footer { text-align: center; padding: 15px; margin-top: 20px; background: #1a1a1a; color: #fff; border-top: 3px solid #007bff; }
-
-    /* Botão WhatsApp */
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
+    .whatsapp-button { position: fixed; bottom: 20px; right: 20px; background-color: #25D366; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(0,0,0,0.3); }
     .whatsapp-button img { width: 35px; height: 35px; }
   </style>
 </head>
@@ -73,6 +52,8 @@
   <nav>
     <a href="#sobre">Sobre</a>
     <a href="#servicos">Serviços</a>
+    <a href="#esclarecimentos">Esclarecimentos</a>
+    <a href="#garantia">Garantia</a>
     <a href="#contato">Contato</a>
   </nav>
 
@@ -91,6 +72,23 @@
     </div>
   </section>
 
+  <section id="esclarecimentos">
+    <h2>Esclarecimentos</h2>
+    <div class="card"><h3>Reprogramação Eletrônica</h3><p>Cada veículo é equipado com um motor gerenciado eletronicamente por uma central conhecida como ECU (Unidade de Controle Eletrônico). Essa peça é essencial, pois regula todos os aspectos do funcionamento do motor, recebendo dados dos sensores e controlando os atuadores. É possível acessar o software dessa central utilizando ferramentas de remapeamento e desenvolver uma nova programação que optimize performance e desempenho sem alterações mecânicas.</p></div>
+    <div class="card"><h3>Remap de ECU</h3><p>Também conhecido como Chiptuning, Recalibração ou Chip de Potência. Alteração dos parâmetros da ECU para melhorar desempenho, remover limitadores ou corrigir problemas crônicos.</p></div>
+    <div class="card"><h3>ECU</h3><p>Computador central que controla o motor, também chamado módulo de injeção ou ECU (Electronic Control Unit).</p></div>
+    <div class="card"><h3>Economia de Combustível</h3><p>Melhora potencial do consumo devido ao torque entregue em rotações mais baixas, permitindo dirigir com giros mais baixos, aproveitando melhor o combustível.</p></div>
+    <div class="card"><h3>Pedal Booster</h3><p>Reconhecimento imediato de aceleração, aumenta esportividade e resposta sem alterações eletrônicas no veículo.</p></div>
+    <div class="card"><h3>Remoção do DPF</h3><p>Filtro de partículas diesel que, quando perde eficiência, pode ser limpo ou substituído após reprogramação da ECU.</p></div>
+    <div class="card"><h3>Soluções no limitador de velocidade</h3><p>Possível desativar limitadores ou aumentar velocidade máxima permitida, dentro de limites seguros.</p></div>
+    <div class="card"><h3>Remoção de erros</h3><p>Correção de falhas eletromecânicas através da reprogramação sem substituição de peças.</p></div>
+  </section>
+
+  <section id="garantia">
+    <h2>Garantia</h2>
+    <p>Damos 30 dias corridos para avaliar os resultados do serviço, e se não ficar satisfeito, retornamos o carro à configuração original, devolvemos seu dinheiro e a amizade continua!</p>
+  </section>
+
   <section id="contato">
     <h2>Contato</h2>
     <p>📞 (62) 99382-7890</p>
@@ -102,7 +100,7 @@
   </footer>
 
   <!-- Botão WhatsApp -->
-  <a class="whatsapp-button" href="https://wa.me/5562993190219" target="_blank" rel="noopener noreferrer">
+  <a class="whatsapp-button" href="https://wa.me/5562993827890" target="_blank" rel="noopener noreferrer">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
   </a>
 </body>
