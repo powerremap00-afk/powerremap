@@ -4,42 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PowerRemap - Performance & ECU</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #111; color: #f1f1f1; }
-    header { padding: 60px 20px; text-align: center; color: #fff; background-color: #222; }
-    header h1 { margin: 0; font-size: 2.5rem; color: #e63946; }
-    header p { margin: 10px 0; font-size: 1.2rem; }
-    nav { background: #e63946; padding: 10px; text-align: center; }
-    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    section { padding: 40px; text-align: center; }
-    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px; }
-    .card { background: #1c1c1c; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.5); }
-    .card h3 { color: #e63946; }
-    footer { background: #222; text-align: center; padding: 20px; margin-top: 40px; }
-    .btn { display: inline-block; padding: 10px 20px; background: #e63946; color: #fff; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 15px; }
-    .btn:hover { background: #c02633; }
-    form { max-width: 500px; margin: 20px auto; text-align: left; background: #1c1c1c; padding: 20px; border-radius: 10px; }
-    form label { display: block; margin-top: 10px; font-weight: bold; }
-    form input, form textarea { width: 100%; padding: 10px; margin-top: 5px; border: none; border-radius: 5px; }
-    form button { margin-top: 15px; background: #e63946; color: #fff; padding: 10px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
-    form button:hover { background: #c02633; }
-    .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px; background-color: #25d366; color: #fff; border-radius: 50%; text-align: center; font-size: 30px; box-shadow: 2px 2px 8px rgba(0,0,0,0.5); z-index: 1000; display: flex; align-items: center; justify-content: center; }
-    .whatsapp-float img { width: 30px; height: 30px; }
-    .whatsapp-bubble { position: fixed; bottom: 90px; right: 25px; background: #25d366; color: #fff; padding: 8px 12px; border-radius: 10px; font-size: 14px; font-weight: bold; box-shadow: 2px 2px 8px rgba(0,0,0,0.5); }
-  </style>
+  <meta name="description" content="Remapeamento de ECU, ajuste de potência, economia de combustível e performance automotiva especializada.">
+  <meta name="keywords" content="remap, potência, ECU, performance, consumo, automotivo, caminhões, frotas">
+  <meta name="author" content="PowerRemap">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/287/287221.png" type="image/png">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
-    function enviarWhatsApp(event) {
-      event.preventDefault();
-      const nome = document.getElementById('nome').value;
-      const email = document.getElementById('email').value;
-      const telefone = document.getElementById('telefone').value;
-      const mensagem = document.getElementById('mensagem').value;
-      const texto = `Olá, meu nome é ${nome}.%0AEmail: ${email}%0ATelefone: ${telefone}%0AMensagem: ${mensagem}`;
-      const numero = "5562993190219";
-      const url = `https://wa.me/${numero}?text=${texto}`;
-      window.open(url, '_blank');
-    }
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
   </script>
+
+  <!-- Facebook Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+    (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'XXXXXXXXXXXXXXX'); 
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXX&ev=PageView&noscript=1"/></noscript>
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f0f0; color: #1a1a1a; }
+
+    /* Tema Azul/Prata */
+    header { padding: 40px 20px; text-align: center; background: linear-gradient(135deg, #007bff, #6c757d); color: #fff; }
+    header h1 { margin: 0; font-size: 2rem; color: #007bff; text-shadow: 2px 2px 5px #000; }
+    nav { background: #1a1a1a; padding: 10px; text-align: center; border-top: 3px solid #007bff; border-bottom: 3px solid #007bff; }
+    nav a { color: #fff; margin: 0 10px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+    nav a:hover { color: #007bff; }
+    .card { background: #fff; border: 1px solid #007bff; box-shadow: 0 4px 8px rgba(0,123,255,0.3); padding: 15px; border-radius: 10px; }
+    .card h3 { color: #007bff; }
+    section { padding: 20px; text-align: center; }
+    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 10px; }
+    footer { text-align: center; padding: 15px; margin-top: 20px; background: #1a1a1a; color: #fff; border-top: 3px solid #007bff; }
+
+    /* Botão WhatsApp */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    .whatsapp-button img { width: 35px; height: 35px; }
+  </style>
 </head>
 <body>
   <header>
@@ -55,64 +78,32 @@
 
   <section id="sobre">
     <h2>Quem Somos</h2>
-    <p>Especialistas em remap, ajuste de ECU e performance automotiva. Nossa missão é entregar potência, economia e confiabilidade para o seu veículo.</p>
+    <p>Especialistas em reprogramação eletrônica da ECU para obter melhorias na potência, no torque, no consumo de combustível e na resposta do acelerador. Tudo isso com a finalidade de aumentar a performance automotiva.</p>
   </section>
 
   <section id="servicos">
     <h2>Nossos Serviços</h2>
     <div class="services">
-      <div class="card">
-        <h3>Remapeamento de ECU</h3>
-        <p>Mais potência e torque sem comprometer a vida útil do motor.</p>
-      </div>
-      <div class="card">
-        <h3>Ajuste de Consumo</h3>
-        <p>Economia de combustível e otimização de desempenho.</p>
-      </div>
-      <div class="card">
-        <h3>Diagnóstico Avançado</h3>
-        <p>Identificação e solução de falhas eletrônicas com precisão.</p>
-      </div>
-      <div class="card">
-        <h3>Frotas & Caminhões</h3>
-        <p>Projetos personalizados para veículos de carga e trabalho.</p>
-      </div>
+      <div class="card"><h3>Tuning</h3><p>Reprogramação para ganho de potência e torque.</p></div>
+      <div class="card"><h3>Remoção de DPF, EGR e DTC</h3><p>Desabilitação de Filtro de Partículas (DPF), Válvula de Recirculação de Gases (EGR) e Códigos de Erros (DTC).</p></div>
+      <div class="card"><h3>Pedal Booster</h3><p>Resposta imediata do acelerador.</p></div>
+      <div class="card"><h3>Desativação de Limitadores</h3><p>Alteração do Limitador de Velocidade.</p></div>
     </div>
-    <a href="#contato" class="btn">Solicite um Orçamento</a>
   </section>
 
   <section id="contato">
-    <h2>Fale Conosco</h2>
-    <p>📍 Localização: Rua Riviera, 123 - Goiânia</p>
-    <p>📞 Telefone: (62) 99319-0219</p>
-    <p>💬 WhatsApp: <a href="https://wa.me/556293190219" target="_blank" style="color:#e63946">Clique aqui</a></p>
-    <p>✉️ Email: powerremap@gmail.com</p>
-
-    <form onsubmit="enviarWhatsApp(event)">
-      <h3>Solicite um Orçamento</h3>
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="telefone">Telefone:</label>
-      <input type="text" id="telefone" name="telefone">
-
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-
-      <button type="submit">Enviar via WhatsApp</button>
-    </form>
+    <h2>Contato</h2>
+    <p>📞 (62) 99382-7890</p>
+    <p>✉️ powerremap00@gmail.com</p>
   </section>
 
   <footer>
-    <p>© 2025 PowerRemap - Todos os direitos reservados.</p>
+    <p>© 2025 PowerRemap</p>
   </footer>
 
-  <div class="whatsapp-bubble">Fale conosco!</div>
-  <a href="https://wa.me/5562993190219" class="whatsapp-float" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+  <!-- Botão WhatsApp -->
+  <a class="whatsapp-button" href="https://wa.me/5562993190219" target="_blank" rel="noopener noreferrer">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
   </a>
 </body>
 </html>
