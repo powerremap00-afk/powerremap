@@ -9,84 +9,90 @@
   <meta name="author" content="PowerRemap">
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/287/287221.png" type="image/png">
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-
-  <!-- Facebook Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'XXXXXXXXXXXXXXX'); fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXX&ev=PageView&noscript=1"/></noscript>
-
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f0f0; color: #1a1a1a; }
-    header { padding: 40px 20px; text-align: center; background: linear-gradient(135deg, #007bff, #6c757d); color: #fff; }
-    header h1 { margin: 0; font-size: 2rem; color: #007bff; text-shadow: 2px 2px 5px #000; }
-    nav { background: #1a1a1a; padding: 10px; text-align: center; border-top: 3px solid #007bff; border-bottom: 3px solid #007bff; }
-    nav a { color: #fff; margin: 0 10px; text-decoration: none; font-weight: bold; transition: 0.3s; }
-    nav a:hover { color: #007bff; }
-    .card { background: #fff; border: 1px solid #007bff; box-shadow: 0 4px 8px rgba(0,123,255,0.3); padding: 15px; border-radius: 10px; margin-bottom: 10px; }
-    .card h3 { color: #007bff; }
-    section { padding: 20px; text-align: center; }
-    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 10px; }
-    footer { text-align: center; padding: 15px; margin-top: 20px; background: #1a1a1a; color: #fff; border-top: 3px solid #007bff; }
-    .whatsapp-button { position: fixed; bottom: 20px; right: 20px; background-color: #25D366; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(0,0,0,0.3); }
-    .whatsapp-button img { width: 35px; height: 35px; }
+    /* Geral */
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; color: #333; }
+    h2 { color: #007bff; margin-bottom: 15px; }
+    p { line-height: 1.6; }
+
+    /* Cabeçalho */
+    header { padding: 30px 20px; background: linear-gradient(135deg, #007bff, #6c757d); color: #fff; display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; text-align: center; }
+    header h1 { font-size: 2.5rem; margin: 0; text-shadow: 2px 2px 5px rgba(0,0,0,0.4); }
+    header p { font-size: 1.2rem; margin-top: 5px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3); }
+    header img { max-width: 100px; height: auto; }
+
+    /* Navegação */
+    nav { background: #1a1a1a; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; padding: 8px 12px; border-radius: 5px; transition: all 0.3s ease; }
+    nav a:hover { background: #007bff; color: #fff; }
+
+    /* Seções */
+    section { padding: 50px 20px; max-width: 1000px; margin: auto; }
+
+    /* Serviços */
+    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 20px; }
+    .card { background: #fff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,123,255,0.1); padding: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; }
+    .card h3 { color: #007bff; margin-bottom: 10px; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,123,255,0.2); }
+
+    /* Garantia e Contato */
+    #garantia p, #contato p { font-size: 1.1rem; }
+
+    /* Rodapé */
+    footer { text-align: center; padding: 20px; background: #1a1a1a; color: #fff; }
+
+    /* Botão WhatsApp */
+    .whatsapp-button { position: fixed; bottom: 25px; right: 25px; background-color: #25D366; border-radius: 50%; width: 65px; height: 65px; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 15px rgba(0,0,0,0.3); transition: transform 0.2s ease; }
+    .whatsapp-button img { width: 38px; height: 38px; }
+    .whatsapp-button:hover { transform: scale(1.1); }
   </style>
 </head>
 <body>
   <header>
-    <h1>PowerRemap</h1>
-    <p>Mais potência, menos consumo, máxima performance</p>
+    <img src="A_logo_for_\"PowerRemap\"_is_set_against_a_plain_whi.png" alt="Logotipo PowerRemap">
+    <div>
+      <h1>PowerRemap</h1>
+      <p>Mais potência, menos consumo, máxima performance</p>
+    </div>
   </header>
 
   <nav>
     <a href="#sobre">Sobre</a>
     <a href="#servicos">Serviços</a>
-    <a href="#esclarecimentos">Esclarecimentos</a>
     <a href="#garantia">Garantia</a>
     <a href="#contato">Contato</a>
   </nav>
 
   <section id="sobre">
     <h2>Quem Somos</h2>
-    <p>Especialistas em reprogramação eletrônica da ECU para obter melhorias na potência, no torque, no consumo de combustível e na resposta do acelerador. Tudo isso com a finalidade de aumentar a performance automotiva.</p>
+    <p>Especialistas em reprogramação eletrônica da ECU para melhorias em potência, torque, consumo de combustível e resposta do acelerador, visando máxima performance automotiva.</p>
   </section>
 
   <section id="servicos">
     <h2>Nossos Serviços</h2>
     <div class="services">
-      <div class="card"><h3>Tuning</h3><p>Reprogramação para ganho de potência e torque.</p></div>
-      <div class="card"><h3>Remoção de DPF, EGR e DTC</h3><p>Desabilitação de Filtro de Partículas (DPF), Válvula de Recirculação de Gases (EGR) e Códigos de Erros (DTC).</p></div>
-      <div class="card"><h3>Pedal Booster</h3><p>Resposta imediata do acelerador.</p></div>
-      <div class="card"><h3>Desativação de Limitadores</h3><p>Alteração do Limitador de Velocidade.</p></div>
+      <div class="card">
+        <h3>Tuning</h3>
+        <p>Reprogramação para ganho de potência e torque.</p>
+      </div>
+      <div class="card">
+        <h3>Remoção de DPF, EGR e DTC</h3>
+        <p>Desabilitação de Filtro de Partículas, Válvula EGR e códigos de erro.</p>
+      </div>
+      <div class="card">
+        <h3>Pedal Booster</h3>
+        <p>Resposta imediata do acelerador.</p>
+      </div>
+      <div class="card">
+        <h3>Desativação de Limitadores</h3>
+        <p>Alteração do limitador de velocidade.</p>
+      </div>
     </div>
-  </section>
-
-  <section id="esclarecimentos">
-    <h2>Esclarecimentos</h2>
-    <div class="card"><h3>Reprogramação Eletrônica</h3><p>Cada veículo é equipado com um motor gerenciado eletronicamente por uma central conhecida como ECU (Unidade de Controle Eletrônico). Essa peça é essencial, pois regula todos os aspectos do funcionamento do motor, recebendo dados dos sensores e controlando os atuadores. É possível acessar o software dessa central utilizando ferramentas de remapeamento e desenvolver uma nova programação que optimize performance e desempenho sem alterações mecânicas.</p></div>
-    <div class="card"><h3>Remap de ECU</h3><p>Também conhecido como Chiptuning, Recalibração ou Chip de Potência. Alteração dos parâmetros da ECU para melhorar desempenho, remover limitadores ou corrigir problemas crônicos.</p></div>
-    <div class="card"><h3>ECU</h3><p>Computador central que controla o motor, também chamado módulo de injeção ou ECU (Electronic Control Unit).</p></div>
-    <div class="card"><h3>Economia de Combustível</h3><p>Melhora potencial do consumo devido ao torque entregue em rotações mais baixas, permitindo dirigir com giros mais baixos, aproveitando melhor o combustível.</p></div>
-    <div class="card"><h3>Pedal Booster</h3><p>Reconhecimento imediato de aceleração, aumenta esportividade e resposta sem alterações eletrônicas no veículo.</p></div>
-    <div class="card"><h3>Remoção do DPF</h3><p>Filtro de partículas diesel que, quando perde eficiência, pode ser limpo ou substituído após reprogramação da ECU.</p></div>
-    <div class="card"><h3>Soluções no limitador de velocidade</h3><p>Possível desativar limitadores ou aumentar velocidade máxima permitida, dentro de limites seguros.</p></div>
-    <div class="card"><h3>Remoção de erros</h3><p>Correção de falhas eletromecânicas através da reprogramação sem substituição de peças.</p></div>
   </section>
 
   <section id="garantia">
     <h2>Garantia</h2>
-    <p>Damos 30 dias corridos para avaliar os resultados do serviço, e se não ficar satisfeito, retornamos o carro à configuração original, devolvemos seu dinheiro e a amizade continua!</p>
+    <p>Oferecemos 01 (um) mês para avaliar o resultado do serviço. Se não ficar satisfeito, retornamos o carro à configuração original, devolvemos seu dinheiro e a amizade continua!</p>
   </section>
 
   <section id="contato">
@@ -99,7 +105,6 @@
     <p>© 2025 PowerRemap</p>
   </footer>
 
-  <!-- Botão WhatsApp -->
   <a class="whatsapp-button" href="https://wa.me/5562993827890" target="_blank" rel="noopener noreferrer">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
   </a>
